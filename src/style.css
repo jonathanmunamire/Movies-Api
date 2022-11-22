@@ -58,7 +58,7 @@ body {
 
 .movie-image {
   width: 100%;
-  height: 10%;
+  height: 55vh;
 }
 
 .movie-details {
@@ -74,15 +74,67 @@ body {
 }
 
 .comment-btn {
+  font-family: 'Poppins', sans-serif;
   border: 1px solid #000;
+  color: black;
   cursor: pointer;
-  height: 25px;
+  height: 2rem;
   margin: 0 15px;
   border-radius: 5px;
 }
 
 .comment-btn:hover {
-  background-color: rgb(214, 199, 199);
+  background-color: black;
+  color: white;
+}
+
+.popup-window {
+  display: none;
+  flex-direction: column;
+  margin: 2% 20% 2% 20%;
+  padding: 2% 10% 2% 10%;
+  z-index: 5;
+  inset: 0;
+  background-color: #fff;
+  border: solid 2px lightgrey;
+  border-radius: 1rem;
+  text-align: center;
+  overflow: auto;
+  position: fixed;
+  backdrop-filter: blur(6px);
+}
+
+.popup-window::-webkit-scrollbar {
+  display: none;
+}
+
+.cancel-button {
+  align-self: flex-end;
+}
+
+.popup-image {
+  margin-top: 2rem;
+  border-radius: .5rem;
+  width: 100%;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.form-section input {
+  margin-bottom: 1rem;
+}
+
+.form-section button {
+  width: fit-content;
+}
+
+.movie-link {
+  text-decoration: none;
 }
 
 .footer {

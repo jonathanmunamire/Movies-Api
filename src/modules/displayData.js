@@ -31,6 +31,49 @@ const createMovie = async () => {
     movieEl.append(iconEl, commentBtn);
     divEl.append(imgEl, h4El, movieEl);
     movies.append(divEl);
+
+    commentBtn.addEventListener('click',()=> {
+      const popupWindow = document.querySelector('.popup-window');
+      popupWindow.style.display = "flex";
+      document.body.style.overflow = 'hidden';
+      popupWindow.innerHTML = `<i class="fa-solid fa-xmark fa-2x cancel-button"></i>
+      <div class="information-section">
+        <img
+          src="${movie.image.original}"
+          alt="movie-image"
+          class="popup-image"
+        />
+        <h2>${movie.name}</h2>
+        <div class="about-movie">
+          <p>language: ${movie.language}</p>
+          <p>Genre: ${movie.genres}</p>
+          <p>${movie.summary}</p>
+          <p>You can watch the movie by clicking <a href="${movie.url}" class="movie-link">here</a></p>
+        </div>
+      </div>
+      <div class="comments-section">
+        <h3>Comments</h3>
+        <p>Jonathan : A Wonderful Movie</p>
+        <p>Joshua : Well Performed</p>
+      </div>
+      <div class="form-section">
+        <h3>Add a Comment</h3>
+        <input type="text" class="name-input" placeholder="Your Name" />
+        <input
+          type="text"
+          class="comment-input"
+          placeholder="Your Insights"
+        />
+        <button class="comment-button">Add</button>
+      </div>`;
+
+      const cancel = document.querySelector(".cancel-button")
+        cancel.addEventListener('click', ()=>{
+          const popupWindow = document.querySelector('.popup-window');
+            popupWindow.style.display = 'none'
+           document.body.style.overflow = 'initial';
+        })
+    });
   });
 };
 
