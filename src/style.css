@@ -4,4 +4,26 @@ body {
 
 .hello {
     color: red;
-  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 35px;
+}
+
+.nav-items { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  list-style: none;
+  margin: 0 15px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+}
+
