@@ -37,6 +37,54 @@ body {
   min-height: 80vh;
 }
 
+#movies {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 35px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 20%;
+  height: 20% !important;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.movie-image {
+  width: 100%;
+  height: 10%;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.fa-heart {
+  cursor: pointer;
+}
+
+.comment-btn {
+  border: 1px solid #000;
+  cursor: pointer;
+  height: 25px;
+  margin: 0 15px;
+  border-radius: 5px;
+}
+
+.comment-btn:hover {
+  background-color: rgb(214, 199, 199);
+}
+
 .footer {
   height: 10vh;
   background-color: rgb(58, 58, 58);
