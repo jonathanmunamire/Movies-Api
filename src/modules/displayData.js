@@ -32,9 +32,9 @@ const createMovie = async () => {
     divEl.append(imgEl, h4El, movieEl);
     movies.append(divEl);
 
-    commentBtn.addEventListener('click',()=> {
+    commentBtn.addEventListener('click', () => {
       const popupWindow = document.querySelector('.popup-window');
-      popupWindow.style.display = "flex";
+      popupWindow.style.display = 'flex';
       document.body.style.overflow = 'hidden';
       popupWindow.innerHTML = `<i class="fa-solid fa-xmark fa-2x cancel-button"></i>
       <div class="information-section">
@@ -67,12 +67,12 @@ const createMovie = async () => {
         <button class="comment-button">Add</button>
       </div>`;
 
-      const cancel = document.querySelector(".cancel-button")
-        cancel.addEventListener('click', ()=>{
-          const popupWindow = document.querySelector('.popup-window');
-            popupWindow.style.display = 'none'
-           document.body.style.overflow = 'initial';
-        })
+      const cancel = document.querySelector('.cancel-button');
+      cancel.addEventListener('click', () => {
+        const popupWindow = document.querySelector('.popup-window');
+        popupWindow.style.display = 'none';
+        document.body.style.overflow = 'initial';
+      });
     });
   });
 };
