@@ -1,5 +1,5 @@
-import { postComment } from "./addComment.js";
-import {fetchComment} from "./fetchComment.js"
+import postComment from './addComment.js';
+import fetchComment from './fetchComment.js';
 
 const movies = document.getElementById('movies');
 const navBar = document.querySelector('.nav');
@@ -81,10 +81,10 @@ const createMovie = async () => {
       });
 
       const submitButton = document.querySelector('.comment-button');
-      submitButton.addEventListener('click', ()=>{
+      submitButton.addEventListener('click', () => {
         const nameInput = document.querySelector('.name-input');
         const commentInput = document.querySelector('.comment-input');
-        if(nameInput.value && commentInput.value) {
+        if (nameInput.value && commentInput.value) {
           postComment(movie.id);
           nameInput.value = '';
           commentInput.value = '';
@@ -94,7 +94,7 @@ const createMovie = async () => {
           navBar.style.filter = 'initial';
           document.body.style.overflow = 'initial';
         }
-      })
+      });
       fetchComment(movie.id);
     });
   });
