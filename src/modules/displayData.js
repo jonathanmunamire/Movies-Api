@@ -19,7 +19,7 @@ const display = async () => {
 const createMovie = async () => {
   const responses = await display();
   const response = responses.slice(79, 103);
-  movieCount.innerHTML = `Movies(${response.length})`
+  movieCount.innerHTML = `Movies(${response.length})`;
   response.forEach((movie) => {
     const divEl = document.createElement('div');
     divEl.classList.add('card');
