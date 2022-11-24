@@ -4,6 +4,7 @@ import { postLike } from './postLike.js';
 
 const movies = document.getElementById('movies');
 const navBar = document.querySelector('.nav');
+const movieCount = document.querySelector('.movieCount');
 
 const display = async () => {
   try {
@@ -16,7 +17,9 @@ const display = async () => {
 };
 
 const createMovie = async () => {
-  const response = await display();
+  const responses = await display();
+  const response = responses.slice(79, 103);
+  movieCount.innerHTML = `Movies(${response.length})`
   response.forEach((movie) => {
     const divEl = document.createElement('div');
     divEl.classList.add('card');

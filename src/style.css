@@ -33,6 +33,12 @@ body {
   color: #000;
 }
 
+.movieCount {
+  margin: 0;
+  padding-left: 3rem;
+
+}
+
 .main-section {
   min-height: 80vh;
 }
@@ -69,7 +75,8 @@ body {
   padding: 10px;
 }
 
-.likeCount .fa-heart {
+.likeCount,
+.fa-heart {
   cursor: pointer;
   color: #d87093;
 }
