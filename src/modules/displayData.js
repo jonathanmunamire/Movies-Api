@@ -1,4 +1,8 @@
+import postComment from './addComment.js';
+import fetchComment from './fetchComment.js';
+
 const movies = document.getElementById('movies');
+const navBar = document.querySelector('.nav');
 
 const display = async () => {
   try {
@@ -35,6 +39,8 @@ const createMovie = async () => {
     commentBtn.addEventListener('click', () => {
       const popupWindow = document.querySelector('.popup-window');
       popupWindow.style.display = 'flex';
+      movies.style.filter = 'blur(6px)';
+      navBar.style.filter = 'blur(6px)';
       document.body.style.overflow = 'hidden';
       popupWindow.innerHTML = `<i class="fa-solid fa-xmark fa-2x cancel-button"></i>
       <div class="information-section">
@@ -45,16 +51,14 @@ const createMovie = async () => {
         />
         <h2>${movie.name}</h2>
         <div class="about-movie">
-          <p>language: ${movie.language}</p>
-          <p>Genre: ${movie.genres}</p>
+          <p>Language: ${movie.language}</p>
+          <p>Genre: ${(movie.genres).join(', ')}</p>
           <p>${movie.summary}</p>
           <p>You can watch the movie by clicking <a href="${movie.url}" class="movie-link">here</a></p>
         </div>
       </div>
       <div class="comments-section">
-        <h3>Comments</h3>
-        <p>Jonathan : A Wonderful Movie</p>
-        <p>Joshua : Well Performed</p>
+        <h3 class="comment-title">Comments</h3>
       </div>
       <div class="form-section">
         <h3>Add a Comment</h3>
@@ -71,8 +75,27 @@ const createMovie = async () => {
       cancel.addEventListener('click', () => {
         const popupWindow = document.querySelector('.popup-window');
         popupWindow.style.display = 'none';
+        movies.style.filter = 'initial';
+        navBar.style.filter = 'initial';
         document.body.style.overflow = 'initial';
       });
+
+      const submitButton = document.querySelector('.comment-button');
+      submitButton.addEventListener('click', () => {
+        const nameInput = document.querySelector('.name-input');
+        const commentInput = document.querySelector('.comment-input');
+        if (nameInput.value && commentInput.value) {
+          postComment(movie.id);
+          nameInput.value = '';
+          commentInput.value = '';
+          const popupWindow = document.querySelector('.popup-window');
+          popupWindow.style.display = 'none';
+          movies.style.filter = 'initial';
+          navBar.style.filter = 'initial';
+          document.body.style.overflow = 'initial';
+        }
+      });
+      fetchComment(movie.id);
     });
   });
 };
