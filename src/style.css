@@ -69,6 +69,17 @@ body {
   padding: 10px;
 }
 
+.likeCount,
+.fa-heart {
+  cursor: pointer;
+  color: #d87093;
+}
+
+.fa-heart:hover {
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
 .fa-heart {
   cursor: pointer;
 }

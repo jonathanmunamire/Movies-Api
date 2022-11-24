@@ -1,5 +1,6 @@
 import postComment from './addComment.js';
 import fetchComment from './fetchComment.js';
+import { postLike } from './postLike.js';
 
 const movies = document.getElementById('movies');
 const navBar = document.querySelector('.nav');
@@ -28,11 +29,15 @@ const createMovie = async () => {
     const h4El = document.createElement('h4');
     h4El.textContent = `${movie.name}`;
     const iconEl = document.createElement('p');
-    iconEl.innerHTML = '<i class="fa-regular fa-heart"></i> 1 Like';
+    iconEl.setAttribute('class', 'like');
+    iconEl.innerHTML = '<i class="fa-regular fa-heart"></i>';
+    const likeCount = document.createElement('p');
+    likeCount.setAttribute('class', 'likeCount');
+    likeCount.setAttribute('id', `${movie.name}`);
     const commentBtn = document.createElement('button');
     commentBtn.classList.add('comment-btn');
     commentBtn.innerText = 'Comment';
-    movieEl.append(iconEl, commentBtn);
+    movieEl.append(likeCount, iconEl, commentBtn);
     divEl.append(imgEl, h4El, movieEl);
     movies.append(divEl);
 
@@ -96,6 +101,13 @@ const createMovie = async () => {
         }
       });
       fetchComment(movie.id);
+    });
+    iconEl.addEventListener('click', () => {
+      console.log('clicked')
+      postLike(`${movie.name}`);
+      let likeNum = Number(likeCount.textContent);
+      likeNum += 1;
+      likeCount.textContent = String(likeNum);
     });
   });
 };
