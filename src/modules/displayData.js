@@ -103,7 +103,6 @@ const createMovie = async () => {
       fetchComment(movie.id);
     });
     iconEl.addEventListener('click', () => {
-      console.log('clicked')
       postLike(`${movie.name}`);
       let likeNum = Number(likeCount.textContent);
       likeNum += 1;
