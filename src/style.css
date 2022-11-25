@@ -1,7 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
 body {
-    background-color: bisque;
+  background-color: bisque;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.hello {
-    color: red;
-  }
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav img {
+  height: 10vh;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  list-style: none;
+  margin: 0 15px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.movieCount {
+  margin: 0;
+  padding-left: 3rem;
+}
+
+.main-section {
+  min-height: 80vh;
+}
+
+#movies {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 35px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 300px;
+  height: 20% !important;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.movie-image {
+  width: 100%;
+  height: 55vh;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.likeCount,
+.fa-heart {
+  cursor: pointer;
+  color: #d87093;
+}
+
+.fa-heart:hover {
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.comment-btn {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #000;
+  color: black;
+  cursor: pointer;
+  height: 2rem;
+  margin: 0 15px;
+  border-radius: 5px;
+}
+
+.comment-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.popup-window-container {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+
+.popup-window {
+  display: none;
+  flex-direction: column;
+  margin: 2% 20% 2% 20%;
+  padding: 2% 10% 2% 10%;
+  z-index: 5;
+  inset: 0;
+  background-color: #fff;
+  border: solid 2px lightgrey;
+  border-radius: 1rem;
+  overflow: auto;
+  position: fixed;
+}
+
+.popup-window::-webkit-scrollbar {
+  display: none;
+}
+
+.cancel-button {
+  align-self: flex-end;
+}
+
+.popup-image {
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.popup-name {
+  text-align: center;
+}
+
+.about-movie {
+  display: flex;
+  gap: 2rem;
+}
+
+.popup-summary {
+  width: 70%;
+}
+
+.comment-title {
+  text-align: center;
+}
+
+.comments-lines {
+  margin: 0;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.form-section input {
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+.name-input {
+  width: 15vw;
+  padding: 1% 1% 1% 1%;
+}
+
+.comment-input {
+  width: 20vw;
+  padding: 1% 1% 10vh 1%;
+}
+
+.form-section button {
+  width: fit-content;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  background-color: #fff;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1% 5% 1% 5%;
+}
+
+.form-section button:hover {
+  background-color: black;
+  color: white;
+}
+
+.movie-link {
+  text-decoration: none;
+}
+
+.footer {
+  height: 10vh;
+  background-color: rgb(58, 58, 58);
+  color: #fff;
+  text-align: center;
+}
