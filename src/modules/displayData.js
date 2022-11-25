@@ -115,4 +115,26 @@ const createMovie = async () => {
   });
 };
 
+const aboutPage = document.querySelector('.about-us');
+const firstPage = document.querySelector('.first-us');
+const aboutLink = document.querySelector('.about-link');
+const firstLink = document.querySelector('.first-link');
+
+aboutPage.classList.add('hide');
+
+aboutLink.addEventListener('click', () => {
+  aboutPage.classList.toggle('hide');
+  firstPage.classList.toggle('hide');
+});
+
+firstLink.addEventListener('click', () => {
+  aboutPage.classList.toggle('hide');
+  firstPage.classList.toggle('hide');
+});
+
+// firstLink.addEventListener('click', ()=>{
+//   aboutPage.classList.toggle('hide');
+//   firstPage.classList.toggle('hide');
+// });
+
 export { display, createMovie };
