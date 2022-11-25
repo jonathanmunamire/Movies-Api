@@ -170,7 +170,7 @@ body {
   margin-bottom: 1rem;
   font-family: 'Poppins', sans-serif;
   border: 2px solid black;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 .name-input {
