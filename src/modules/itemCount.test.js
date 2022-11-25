@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import movieCount from '../__mocks__/itemCount.js';
+import movieCount from './__mocks__/itemCount.js';
 
 describe('Test for Items', () => {
   test('Number of Movies should be 6', () => {
