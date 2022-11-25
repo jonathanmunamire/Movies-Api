@@ -55,7 +55,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  width: 20%;
+  width: 300px;
   height: 20% !important;
   border-radius: 10px;
   margin: 15px;
@@ -116,7 +116,6 @@ body {
   background-color: #fff;
   border: solid 2px lightgrey;
   border-radius: 1rem;
-  text-align: center;
   overflow: auto;
   position: fixed;
 }
@@ -135,6 +134,27 @@ body {
   width: 100%;
 }
 
+.popup-name {
+  text-align: center;
+}
+
+.about-movie {
+  display: flex;
+  gap: 2rem;
+}
+
+.popup-summary {
+  width: 70%;
+}
+
+.comment-title {
+  text-align: center;
+}
+
+.comments-lines {
+  margin: 0;
+}
+
 .form-section {
   display: flex;
   flex-direction: column;
@@ -142,12 +162,42 @@ body {
   margin-right: 10%;
 }
 
+.form-title {
+  text-align: center;
+}
+
 .form-section input {
   margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+}
+
+.name-input {
+  width: 15vw;
+  padding: 1% 1% 1% 1%;
+}
+
+.comment-input {
+  width: 20vw;
+  padding: 1% 1% 10vh 1%;
 }
 
 .form-section button {
   width: fit-content;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  background-color: #fff;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1% 5% 1% 5%;
+}
+
+.form-section button:hover {
+  background-color: black;
+  color: white;
 }
 
 .movie-link {

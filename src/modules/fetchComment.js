@@ -10,7 +10,7 @@ const fetchComment = async (id) => {
     .then((data) => {
       commentTitle.innerHTML = `Comments (${data.length})`;
       data.forEach((comment) => {
-        commentSection.insertAdjacentHTML('beforeend', `<p>${comment.creation_date} - ${comment.username} : ${comment.comment}</p> <hr>`);
+        commentSection.insertAdjacentHTML('beforeend', `<p class="comments-lines">${comment.creation_date} - ${comment.username} : ${comment.comment}</p> <hr>`);
       });
     })
     .catch((error) => {

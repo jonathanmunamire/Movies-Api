@@ -57,19 +57,20 @@ const createMovie = async () => {
           alt="movie-image"
           class="popup-image"
         />
-        <h2>${movie.name}</h2>
+        <h2 class="popup-name">${movie.name}</h2>
         <div class="about-movie">
-          <p>Language: ${movie.language}</p>
+          <div class="popup-summary"><p>${movie.summary}</p></div>
+          <div><p>Language: ${movie.language}</p>
           <p>Genre: ${(movie.genres).join(', ')}</p>
-          <p>${movie.summary}</p>
           <p>You can watch the movie by clicking <a href="${movie.url}" class="movie-link">here</a></p>
+          </div>
         </div>
       </div>
       <div class="comments-section">
         <h3 class="comment-title">Comments</h3>
       </div>
       <div class="form-section">
-        <h3>Add a Comment</h3>
+        <h3 class="form-title">Add a Comment</h3>
         <input type="text" class="name-input" placeholder="Your Name" />
         <input
           type="text"
