@@ -226,6 +226,10 @@ body {
   padding-top: 6%;
 }
 
+.about-body {
+  min-height: 80vh;
+}
+
 .about-us h1,
 .about-us p {
   padding-left: 5%;
