@@ -135,9 +135,4 @@ firstLink.addEventListener('click', () => {
   firstPage.classList.toggle('hide');
 });
 
-// firstLink.addEventListener('click', ()=>{
-//   aboutPage.classList.toggle('hide');
-//   firstPage.classList.toggle('hide');
-// });
-
 export { display, createMovie };
