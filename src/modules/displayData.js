@@ -126,13 +126,13 @@ const firstLink = document.querySelector('.first-link');
 aboutPage.classList.add('hide');
 
 aboutLink.addEventListener('click', () => {
-  aboutPage.classList.toggle('hide');
-  firstPage.classList.toggle('hide');
+  aboutPage.classList.remove('hide');
+  firstPage.classList.add('hide');
 });
 
 firstLink.addEventListener('click', () => {
-  aboutPage.classList.toggle('hide');
-  firstPage.classList.toggle('hide');
+  aboutPage.classList.add('hide');
+  firstPage.classList.remove('hide');
 });
 
 export { display, createMovie };
