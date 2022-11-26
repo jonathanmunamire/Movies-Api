@@ -49,6 +49,7 @@ const createMovie = async () => {
       popupWindow.style.display = 'flex';
       movies.style.filter = 'blur(6px)';
       navBar.style.filter = 'blur(6px)';
+      movieCount.style.filter = 'blur(6px)';
       document.body.style.overflow = 'hidden';
       popupWindow.innerHTML = `<i class="fa-solid fa-xmark fa-2x cancel-button"></i>
       <div class="information-section">
@@ -86,6 +87,7 @@ const createMovie = async () => {
         popupWindow.style.display = 'none';
         movies.style.filter = 'initial';
         navBar.style.filter = 'initial';
+        movieCount.style.filter = 'initial';
         document.body.style.overflow = 'initial';
       });
 
@@ -101,6 +103,7 @@ const createMovie = async () => {
           popupWindow.style.display = 'none';
           movies.style.filter = 'initial';
           navBar.style.filter = 'initial';
+          movieCount.style.filter = 'initial';
           document.body.style.overflow = 'initial';
         }
       });
@@ -117,24 +120,100 @@ const createMovie = async () => {
 
 const aboutPage = document.querySelector('.about-us');
 const firstPage = document.querySelector('.first-us');
+const actorsPage = document.querySelector('.actors');
 const aboutLink = document.querySelector('.about-link');
 const firstLink = document.querySelector('.first-link');
+const actorsLink = document.querySelector('.actors-link');
+
+// actorsPage.innerHTML = ``;
+
+aboutPage.innerHTML = `<div class="about-body">
+<h1 class="about-title">About Us</h1>
+<p class="about-p">
+  This project has been build by a group of two persons. If You want to
+  know more about us, you can still reach out to us through the links
+  below
+</p>
+<div class="about-information-section">
+  <div class="jonathan-section">
+    <h2>Jonathan Munamire</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/jonathanmunamire" target="_blank"
+          ><i class="fa-brands fa-github fa-2x"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/jonathanmunamire/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin fa-2x"></i
+        ></a>
+      </li>
+      <li>
+        <a href="https://twitter.com/amanimunamire" target="_blank"
+          ><i class="fa-brands fa-twitter fa-2x"></i
+        ></a>
+      </li>
+      <li>
+        <a href="mailto:jonathanmunamire@gmail.com"
+          ><i class="fa-regular fa-envelope fa-2x"></i
+        ></a>
+      </li>
+    </ul>
+  </div>
+  <div class="joshua-section">
+    <h2>Joshua Tamunokuro</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/Tamunokuro" target="_blank"
+          ><i class="fa-brands fa-github fa-2x"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/joshua-blue-jack/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin fa-2x"></i
+        ></a>
+      </li>
+      <li>
+        <a href="https://twitter.com/tamuno____" target="_blank"
+          ><i class="fa-brands fa-twitter fa-2x"></i
+        ></a>
+      </li>
+      <li>
+        <a href="mailto:tamunokrobluejack@gmail.com"
+          ><i class="fa-regular fa-envelope fa-2x"></i
+        ></a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+<footer class="footer">
+<p>&copy; Copyright 2021 | Designed by Joshua and Jonathan</p>
+</footer>`;
 
 aboutPage.classList.add('hide');
+actorsPage.classList.add('hide');
 
 aboutLink.addEventListener('click', () => {
-  aboutPage.classList.toggle('hide');
-  firstPage.classList.toggle('hide');
+  aboutPage.classList.remove('hide');
+  firstPage.classList.add('hide');
+  actorsPage.classList.add('hide');
 });
 
 firstLink.addEventListener('click', () => {
-  aboutPage.classList.toggle('hide');
-  firstPage.classList.toggle('hide');
+  aboutPage.classList.add('hide');
+  firstPage.classList.remove('hide');
+  actorsPage.classList.add('hide');
 });
 
-// firstLink.addEventListener('click', ()=>{
-//   aboutPage.classList.toggle('hide');
-//   firstPage.classList.toggle('hide');
-// });
+actorsLink.addEventListener('click', () => {
+  aboutPage.classList.add('hide');
+  firstPage.classList.add('hide');
+  actorsPage.classList.remove('hide');
+});
 
 export { display, createMovie };

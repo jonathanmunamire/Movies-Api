@@ -222,12 +222,41 @@ body {
   display: none;
 }
 
+.actors {
+  min-height: 80vh;
+}
+
+.actors-cards {
+  min-height: 90vh;
+}
+
 .about-us {
   padding-top: 6%;
 }
 
+.about-body {
+  min-height: 75vh;
+}
+
 .about-us h1,
 .about-us p {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.about-information-section {
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  justify-content: space-evenly;
+}
+
+.about-information-section ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.fa-2x {
+  color: black;
 }
