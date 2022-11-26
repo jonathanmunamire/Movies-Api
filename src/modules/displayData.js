@@ -49,6 +49,7 @@ const createMovie = async () => {
       popupWindow.style.display = 'flex';
       movies.style.filter = 'blur(6px)';
       navBar.style.filter = 'blur(6px)';
+      movieCount.style.filter = 'blur(6px)';
       document.body.style.overflow = 'hidden';
       popupWindow.innerHTML = `<i class="fa-solid fa-xmark fa-2x cancel-button"></i>
       <div class="information-section">
@@ -86,6 +87,7 @@ const createMovie = async () => {
         popupWindow.style.display = 'none';
         movies.style.filter = 'initial';
         navBar.style.filter = 'initial';
+        movieCount.style.filter = 'initial';
         document.body.style.overflow = 'initial';
       });
 
@@ -101,6 +103,7 @@ const createMovie = async () => {
           popupWindow.style.display = 'none';
           movies.style.filter = 'initial';
           navBar.style.filter = 'initial';
+          movieCount.style.filter = 'initial';
           document.body.style.overflow = 'initial';
         }
       });
