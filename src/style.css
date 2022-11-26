@@ -232,6 +232,23 @@ body {
 
 .about-us h1,
 .about-us p {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.about-information-section {
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  justify-content: space-evenly;
+}
+
+.about-information-section ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.fa-2x {
+  color: black;
 }
