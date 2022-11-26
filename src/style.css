@@ -222,6 +222,14 @@ body {
   display: none;
 }
 
+.actors {
+  min-height: 80vh;
+}
+
+.actors-cards {
+  min-height: 90vh;
+}
+
 .about-us {
   padding-top: 6%;
 }
